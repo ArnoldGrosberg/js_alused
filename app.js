@@ -1,83 +1,49 @@
-const numbers1 = [35,215,-123,0,1359,649370925,687,4351,12];
-const numbers2 = new Array(35,535,-123,0,1359,63498770925,657,4151,12);
-const fruits = ["õun", "banaan", "apelsiin", "virsik"];
-const mixed = 
-[2,"Tere!", true, undefined, , null,
- {a1: 1, b:2}, new Date() ];
+// objekt, alati on nimi:väärtus, nimi:väärtus
 
-// console.log(fruits);
-// console.log(typeof fruits);
-// console.log(mixed);
-// console.log(typeof mixed);
+const person = {
+    firstName: "Kati",
+    lastName: "Tamm",
+    age: 36,
+    email: "kadi.tammgmail.com",
+    hobbies: ["muusika", "sport"],
+    address: {
+        city: "Tallinn",
+        country: "Harjumaa"
+    },
+    getBirthYear: function(){
+        return 2021 - this.age;
+    }
+};
 
 let val;
 
-val = numbers1.lenght; // massiivi pikkus
-val = Array.isArray(numbers1); // kas on massiiv
-val = numbers1[3]; // kindel element
-val = numbers1[0];
+val = person;
 
-numbers1[2] = 100; // element lisamine
+// kui on vaja teatud asju objektist
+val = person.firstName;
+val = person['lastName'];
+val = person.age;
+val = person.hobbies;
 
-// console.log(val);
-// console.log(numbers1);
-
-val = numbers1.indexOf(0); // elementi jälgimine
-
-// console.log(val);
-
-// numbers1.push(250);  // elementi lisamine lõppu
-// console.log(numbers1); 
-// numbers1.unshift(250); // elementi maha võtmine
-// console.log(numbers1); 
-// numbers1.pop(); // viimase elementi maha võtmine
+// nii ei saa?
+val = person.address.city;
 
 
-// console.log(numbers1);
+// nii peab olema
+val = person.address['city'];
 
+val = person.getBirthYear();
 
-// numbers1.slice(1,5); // lõikamine
-// console.log(numbers1);
+const people = [
+    {name: "Kati", age: 36},
+    {name: "Mati", age: 33},
+    {name: "Mike", age: 23},
 
-val = numbers1.concat(numbers2); // massiivi liitmine
+];
+val = people;
 
-val = fruits.sort(); // sõnede sorteerimine ja töötab
-
-console.log(numbers1);
-// ei oĺe võimalik sorteerida lihtsalt .sort() -iga, peab tegema funktsiooni
-val = numbers1.sort(function(x, y){
-    return x -y;
+for(let i = 0; i < people.lenght; i + 1){
+    console.log(people[i].name);
 }
-    );
 
-
-console.log(val); // massiivi tulemuse väljastamine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(val);
