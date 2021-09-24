@@ -1,101 +1,27 @@
-// Andmetüübid
+const name = "Arnold Grosberg";
+const age = 17;
+const job = "Tartu kutsehariduskeskuse õpilane";
+const linn = "Tartu";
 
+let html;
 
+html = '<ul>' +
+			'<li>' + name + '</li>' +
+			'<li>' + age + '</li>' +
+			'<li>' + job + '</li>' +
+			'<li>' + linn + '</li>' +
+			'</ul>';
 
-// Primitiivid
+// es6 - template string;
 
+html = `
+	<ul> 
+		<li>Name ${name}</li> 
+		<li>Age ${age}</li> 
+		<li>Job ${job}</li> 
+		<li>City ${linn}</li> 
+	</ul>`;
 
+console.log(html);
 
-// String - tekst
-
-const name = 'Anna';
-
-console.log(typeof name);
-
-
-
-// Number
-
-const age = 15;
-
-console.log(typeof age);
-
-
-
-const persent = 50.3;
- 
-console.log(typeof persent);
-
-
-
-// Boolean - true või false
-
-const hasKids = true;
-
-console.log(typeof true);
-
-
-
-// Null
-
-const airplane = null;
-
-console.log(typeof airplane);
-
-
-
-// Undefined
-
-let test;
-
-console.log(typeof test);
-
-
-
-// Symbol
-
-const sym = Symbol();
-
-console.log(typeof sym);
-
-
-
-// Objects - reference types - tüübid, mille sisu saab viide kaudu
-
-// Array - massiv
-
-const hobbies = ['movies', 'music'];
-
-console.log(typeof hobbies);
-
-
-
-// Object
-
-const person = {
-
-	name: 'Kadi',
-
-	age: 15
-
-};
-
-console.log(typeof person);
-
-
-
-// näiteks kuupäeva objekt
-
-const today = new Date();
-
-console.log(typeof today);
-
-console.log(today);
-
-
-
-val2 = surname[0];
-val2 = surname.indexOf("a");
-val2 = surname.lastIndexOF("d");
-
-console.log(val2);
+document.body.innerHTML = html;
