@@ -1,49 +1,26 @@
-// objekt, alati on nimi:väärtus, nimi:väärtus
-
-const person = {
-    firstName: "Kati",
-    lastName: "Tamm",
-    age: 36,
-    email: "kadi.tammgmail.com",
-    hobbies: ["muusika", "sport"],
-    address: {
-        city: "Tallinn",
-        country: "Harjumaa"
-    },
-    getBirthYear: function(){
-        return 2021 - this.age;
-    }
-};
-
 let val;
 
-val = person;
+const today = new Date();
 
-// kui on vaja teatud asju objektist
-val = person.firstName;
-val = person['lastName'];
-val = person.age;
-val = person.hobbies;
+val = today.getMonth(); // 0 on jaanuar
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime(); // Millisekundid alatest jaanuarist GetTime
 
-// nii ei saa?
-val = person.address.city;
+let birthday = new Date('9/27/2001');
+birthday = new Date('September 27 2001');
 
+birthday.setMonth(2); // 0 - jaanuar
+birthday.setDate(12);
+birthday.setFullYear(2001);
+birthday.setHours(11);
+birthday.setMinutes(25);
+birthday.setSeconds(50);
 
-// nii peab olema
-val = person.address['city'];
-
-val = person.getBirthYear();
-
-const people = [
-    {name: "Kati", age: 36},
-    {name: "Mati", age: 33},
-    {name: "Mike", age: 23},
-
-];
-val = people;
-
-for(let i = 0; i < people.lenght; i + 1){
-    console.log(people[i].name);
-}
-
+console.log(birthday);
 console.log(val);
