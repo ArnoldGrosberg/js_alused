@@ -1,81 +1,61 @@
-/*
-if(tingimus) {     if puhul
-	// tegevused if puhul
-} else {
-	// tegevused else puhul
-}	
-*/
-const id = 100;
+const color = "green";
 
-// == võrdub
-// != Ei võrdu
-// === võrdub ja tüǘbikontroll
-// !== Ei võrdu ja tüübikontroll
-
-
-let testId;
-
-console.log(testId);
-
-/*
-if(typeof testId !== undefined){
-	console.log(`id on ${testId}`);
-} else {
-	console.log("Vale");
+switch(color) {
+	case "red":
+		console.log("Stop!");
+		break;
+	case "yellow":
+		console.log("Attention!");
+		break;
+	case "green":
+		console.log("Go!");
+		break;
+	default:
+		console.log("This color is not accepted!");
+		break;
 }
-*/
 
+// loo kuupäeva objekt
+// nädalapäeva numbri järgi väljastan mis nädala nimitusega on tegu - eesti keeles
+// testi kõiki päevasi
 
-/*
-// > Ja <
-if(id >100){
-	console.log(`id on ${id} - suurem kui 100`)
-} else{
-	console.log(`id on ${id} - väiksem või võrdne 100`)
-}
-*/
+let kuupäev = new Date("11/03/2021");
+let nädalapäev = kuupäev.getDay();
+console.log(nädalapäev);
 
-
-/*
-// if - else if - else
-const color = "blue";
-
-if(color=="red"){
-	console.log("Stop!");
-} else if (color == "yellow"){
-	console.log("Attention!");
-} else if (color == "green"){
-console.log("Go!");
-} else {
-	console.log('Color is not accepted!');
-}
-*/
-
-// and - &&
-const name = "Kadi";
-const age = 70;
-
-if(age >0 && age <= 12){
-	console.log(`${name} on laps`);
-} else if (age > 12 && age < 18){
-	console.log(`${name} on nooruk`);
-} else {
-	console.log(`${name} on täiskasvanud`);
+switch(nädalapäev) {
+	case 1:
+		console.log("Esmaspäev");
+		break;
+	case 2:
+		console.log("Teisipäev!");
+		break;
+	case 3:
+		console.log("Kolmapäev");
+		break;
+	case 4:
+		console.log("Neljapäev");
+		break;
+	case 5:
+		console.log("Reede");
+		break;
+	case 6:
+		console.log("Laupäev");
+		break;
+	case 0:
+		console.log("Pühapäev");
+		break;
+	default:
+		console.log("Pole õige nädalapäeva number!");
+		break;
 }
 
 
-// or = ||
-if(age < 18 || age > 65){
-	console.log(`${name} ei saa registreerida`)
-} else {
-	console.log(`${name} on registreeritud`);
-}
 
-// ? - ternary operaator
-console.log(id === 100 ? 'Õige' : 'vale');
 
-// ilma ()
-if(id === 100) 
-	console.log('Korras');
-else 
-	console.log("Ei ole korras");
+
+
+
+
+
+
