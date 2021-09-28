@@ -1,76 +1,73 @@
-// for tsükkel
-
-console.log("for tsükkel");
-for(let i = 0; i < 10; i++){
-	if(i == 5){
-		// break;
-		continue;
+ // funktsioonid defineerimine  deklareerimine
+function greeting(firstname = 'Kadi', lastname = 'Tamm'){
+	/*if (typeof firstname === 'undefined'){
+		firstname = 'Kadi';
 	}
-	console.log(i);
+	if (typeof lastname === 'undefined'){
+		lastname = 'Tamm';
+	}*/
+	return 'Tere. ' + firstname +' ' +lastname;
+}
+// funktsiooni kutsumine tööle
+
+let greet = (greeting());
+console.log(greet);
+
+console.log();
+// funktsioon avaldise kujul
+const square = function(number = 3){
+	return number * number;
+}
+console.log(square());
+
+// IIFE - Immediately Invokable Function Expression
+(function(){
+	console.log("function is running");
+})();
+
+(function(name){
+	console.log("Tere " + name);
+})('Anna');
+
+console.log();
+// objekti see defineeritud funktsioonid
+const todo = {
+	add: function(){
+		console.log("Add:todo ...");
+	},
+	edit: function(id){
+		console.log(`edit todo ${id}`);
+	},
+	delete: function(){
+		 console.log("Delete todo ...");
+	}
 }
 
-// while tsükkel
-
-console.log("while tsükkel");
-
-let i = 0;
-
-while(i < 10){
-	console.log(i);
-	i++;
-}
+todo.add();
+todo.edit(5);
+todo.delete();
 
 
-// do while
-
-console.log("do while tsükkel");
-
-let j = 11;
-do{
-	console.log(j);
-	j++;
-} while(j < 10);
 
 
-// tsüklid ja massiivid
-
-console.log("tsüklid ja massiivid");
-
-const cars = ['Ford', 'Honda', 'Toyota'];
-
-// for tsükliga
-for(let i = 0; i < cars.length; i++){
-	console.log(cars[i]);
-}
 
 
-// forEach
-
-console.log("forEach tsükkel");
 
 
-// forEach - callback funtion
-cars.forEach(function(element, index, arrey){
-	console.log(`cards[${index} = ${element}]`);
-	console.log(arrey);
-});
 
-// forEach (arrow) => function
-cars.forEach((element, index) => {
-	console.log(`cards[${index} = ${element}]`);
-});
-// on võimalik ka kolmas variant
 
-console.log("tsüklid ja objektid")
-// tsüklid ja objektid
-const person = {
-	firstName: 'Kadi',
-	surname: 'Tamm',
-	age: 25
-}
 
-// for in tsükkel
 
-for(let key in person){
-	console.log(`${key} = ${person[key]}`);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
