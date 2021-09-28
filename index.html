@@ -5,32 +5,51 @@
 	<head>
 
 		<meta charset="utf-8">
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 		<title>JS alused</title>
 
 	</head>
 
 	<body>
-		<h2>JS alused - To do list</h2>
-		<label for="lname">Kirjuta endale to do list.</label><br>
-  <textarea id="hello" name="lname" rows="10" cols="30">
-</textarea><br>
+		<div class="container">
+			<!-- Page Content goes here -->
+		 <div class="row">
+		 	<div class="col s12">
+		 		<h2>JS alused - DOM</h2>
+		 		<div class="card">
+		 			<div class="card-content">
+		 				<span class="card-title">Task List</span>
+		 				<div class="row">
+		 					<form id="task-form" 
+		 					method='get'>
+		 						<div class="input-field col s6">
+		 							<input type="text">
+		 							<label for="">New task</label>
+		 						</div>
+		 						    <input type="submit" value="Add Task" class="button">
+		 					</form>
+		 				</div>
+		 			</div>
+		 			<div class="card-action">
+		 				<p>Tasks</p>
+		 				
+    <ul class="collection">
+      <li class="collection-item"><a href="#" click class="Secondary content">Study JS </a></li>
+      <li class="collection-item"><a href="#" click class="Blue text">Study HTML </a></li>
+      <li class="collection-item"><a href="#" click class="background thing">Study CSS </a></li>
+    </ul>
+            
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+		</div>
 
-
-
-  <input id="type" type="submit" value="Saada" onclick="tere()">
-  <br>
-
-
-
-
-	
-</ul>
-
-<h2><span style="margin-left : 1em;"><b>List:</b></span></h2>
-<ul id="ul">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="app.js"></script>
 
 	</body>
