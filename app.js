@@ -1,61 +1,76 @@
-const color = "green";
+// for tsükkel
 
-switch(color) {
-	case "red":
-		console.log("Stop!");
-		break;
-	case "yellow":
-		console.log("Attention!");
-		break;
-	case "green":
-		console.log("Go!");
-		break;
-	default:
-		console.log("This color is not accepted!");
-		break;
+console.log("for tsükkel");
+for(let i = 0; i < 10; i++){
+	if(i == 5){
+		// break;
+		continue;
+	}
+	console.log(i);
 }
 
-// loo kuupäeva objekt
-// nädalapäeva numbri järgi väljastan mis nädala nimitusega on tegu - eesti keeles
-// testi kõiki päevasi
+// while tsükkel
 
-let kuupäev = new Date("11/03/2021");
-let nädalapäev = kuupäev.getDay();
-console.log(nädalapäev);
+console.log("while tsükkel");
 
-switch(nädalapäev) {
-	case 1:
-		console.log("Esmaspäev");
-		break;
-	case 2:
-		console.log("Teisipäev!");
-		break;
-	case 3:
-		console.log("Kolmapäev");
-		break;
-	case 4:
-		console.log("Neljapäev");
-		break;
-	case 5:
-		console.log("Reede");
-		break;
-	case 6:
-		console.log("Laupäev");
-		break;
-	case 0:
-		console.log("Pühapäev");
-		break;
-	default:
-		console.log("Pole õige nädalapäeva number!");
-		break;
+let i = 0;
+
+while(i < 10){
+	console.log(i);
+	i++;
 }
 
 
+// do while
+
+console.log("do while tsükkel");
+
+let j = 11;
+do{
+	console.log(j);
+	j++;
+} while(j < 10);
 
 
+// tsüklid ja massiivid
+
+console.log("tsüklid ja massiivid");
+
+const cars = ['Ford', 'Honda', 'Toyota'];
+
+// for tsükliga
+for(let i = 0; i < cars.length; i++){
+	console.log(cars[i]);
+}
 
 
+// forEach
+
+console.log("forEach tsükkel");
 
 
+// forEach - callback funtion
+cars.forEach(function(element, index, arrey){
+	console.log(`cards[${index} = ${element}]`);
+	console.log(arrey);
+});
 
+// forEach (arrow) => function
+cars.forEach((element, index) => {
+	console.log(`cards[${index} = ${element}]`);
+});
+// on võimalik ka kolmas variant
 
+console.log("tsüklid ja objektid")
+// tsüklid ja objektid
+const person = {
+	firstName: 'Kadi',
+	surname: 'Tamm',
+	age: 25
+}
+
+// for in tsükkel
+
+for(let key in person){
+	console.log(`${key} = ${person[key]}`);
+}
