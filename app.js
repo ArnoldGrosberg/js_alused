@@ -1,35 +1,25 @@
-
 let val;
 
-// document.getElementById();
+val = document.querySelectorAll('li');
 
-val = document.getElementById("task-title");
-val = document.getElementById("task-title").id;
-val = document.getElementById("task-title").className;
+const oddLi = document.querySelectorAll('li:nth-child(odd)');
 
-const taskTitle = document.getElementById("task-title");
+const evenLi = document.querySelectorAll('li:nth-child(even)');
 
-// stiili muutmine
-taskTitle.style.background = "#333";
-taskTitle.style.color = "#333";
-taskTitle.style.padding = "5px";
-// taskTitle.style.display = "none";
+//document.querySelector('li:nth-child(odd)').style.background = 'black';
+// document.querySelector('li:nth-child(odd)').style.background = 'black';
 
+document.querySelector('body').style.background = 'gray';
 
-// text content
-taskTitle.textContent = "My task";
-taskTitle.innerText = "My function Tasks";
-taskTitle.innerHTML = "<span style='color:red'></span>";
+// document.querySelector('li:nth-child(even)').style.background = 'white';
 
-// document.querySelector
-val = document.querySelector('#task-title')
-val = document.querySelector('card-title')
-val = document.querySelector('h2')
+oddLi.forEach(function(li){
+	 console.log(li); // võib asendada ka muu tegevusega
+	 li.style.background = 'gray';
+})
 
+for(let i = 0;i <= evenLi.length; i++ ){
+	 evenLi[i].style.background = "#f4f4f4";
+}
 
-document.querySelector('li').style.color = 'green';
-document.querySelector('ul li').style.color = 'blue';
-document.querySelector('li:last-child').style.color = 'green';
-
-document.querySelector('li:nth-child').style.color = 'blue';
-console.log(val);
+// console.log(oddLi);
