@@ -1,38 +1,22 @@
-let val;
-
+// elementi looming
 const list = document.querySelector('ul');
-const listItem = document.querySelector('li:first-child');
 
-val = list;
-val = listItem;
+// classi määramine
+const li  = document.createElement('li');
+li.className = 'collection-item';
 
-val = list.childNodes;
-val = list.childNodes[0].nodeName;
-val = list.childNodes[0].nodeType;
+// texti lisamine,
+li.appendChild(document.createTextNode('Study element creation'));
 
-val = list.children;
-val = list.children[1].textContent = 'Study XML';
+const link  = document.createElement('a');
+link.className = 'secondary-content';
+link.appendChild(document.createTextNode('X'));
+// lisan atribuut väärtusega #
+link.setAttribute('href', '#');
+// lisan elemendi
+list.appendChild(link);
 
-//val = list.children[1].children[0].id = "test-link"
+// elemendi lisamine teise elemendi sisse
+list.appendChild(li);
 
-val = list.children[2].children;
-list.children[2].children[0].id = 'test-id';
-val = list.children[2].children[0];
-
-val = list.firstChild;
-val = list.firstElementChild;
-
-val = list.lastChild;
-val = list.lastElementChild;
-
-val = list.childElementCount;
-
-val = list.parentNode;
-val = list.parentElement;
-val = list.parentElement.parentElement;
-
-val = listItem.nextSibling;
-val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
-
-
-console.log(val);
+console.log(link);
