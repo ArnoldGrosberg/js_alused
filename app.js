@@ -1,25 +1,38 @@
 let val;
 
-val = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+const listItem = document.querySelector('li:first-child');
 
-const oddLi = document.querySelectorAll('li:nth-child(odd)');
+val = list;
+val = listItem;
 
-const evenLi = document.querySelectorAll('li:nth-child(even)');
+val = list.childNodes;
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
 
-//document.querySelector('li:nth-child(odd)').style.background = 'black';
-// document.querySelector('li:nth-child(odd)').style.background = 'black';
+val = list.children;
+val = list.children[1].textContent = 'Study XML';
 
-document.querySelector('body').style.background = 'gray';
+//val = list.children[1].children[0].id = "test-link"
 
-// document.querySelector('li:nth-child(even)').style.background = 'white';
+val = list.children[2].children;
+list.children[2].children[0].id = 'test-id';
+val = list.children[2].children[0];
 
-oddLi.forEach(function(li){
-	 console.log(li); // võib asendada ka muu tegevusega
-	 li.style.background = 'gray';
-})
+val = list.firstChild;
+val = list.firstElementChild;
 
-for(let i = 0;i <= evenLi.length; i++ ){
-	 evenLi[i].style.background = "#f4f4f4";
-}
+val = list.lastChild;
+val = list.lastElementChild;
 
-// console.log(oddLi);
+val = list.childElementCount;
+
+val = list.parentNode;
+val = list.parentElement;
+val = list.parentElement.parentElement;
+
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+
+console.log(val);
