@@ -1,51 +1,12 @@
-// elemendi leidmine
-const form = document.querySelector('form');
-const taskInput = document.querySelector('#task');
-const heading = document.querySelector('h4');
+// event elements
+const taskList = document.querySelector('ul')
 
-taskInput.value = "";
+// taskList.remove();
 
-// submit
-form.addEventListener('submit', runEvent);
+// click
+taskList.addEventListener('click', removeFromList)
 
-// keyboard
-// taskInput.addEventListener('keydown', runEvent);
-// taskInput.addEventListener('keyup', runEvent);
-// taskInput.addEventListener('keypress', runEvent);
-
-// input väljas fokuseerimine ja lahti fokuseerimine
-// taskInput.addEventListener('focus', runEvent);
-// taskInput.addEventListener('blur', runEvent);
-
-// taskInput.addEventListener('cut', runEvent);
-// taskInput.addEventListener('paste', runEvent);
-// taskInput.addEventListener('input', runEvent);
-
-
-function runEvent(e) {
-  const li = document.createElement('li');
-  const list = document.querySelector('ul');
-
-  li.className = 'collection-item';
-  li.appendChild(document.createTextNode(taskInput.value));
-
-  const link = document.createElement('a');
-  link.className = 'secondary-content';
-  link.appendChild(document.createTextNode('X'));
-  link.setAttribute('href', '#');
-
-  li.appendChild(link);
-  list.appendChild(li);
-
-  taskInput.value = "";
-
-  e.preventDefault();
+function removeFromList(e) {
+  const target = event.target.parentElement;
+  target.remove();
 }
-
-function lisaElement(){
-  let i = document.getElementById("nupp").submit;
-  document.getElementById("ul").innerHTML += `<li>${i}`;
-} 
-
-
-
