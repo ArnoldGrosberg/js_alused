@@ -6,9 +6,14 @@ const taskList = document.querySelector('ul')
 taskList.addEventListener('click', deleteTask);
 
 function deleteTask(e) {
-  if(e.target.textContent = 'X'){
+  if (e.target.parentElement == 'Delete All Tasks'){
+    if(confirm('Kas oled kindel, et kustutame kõik ülesanded?')){
+      e.target.parentElement.remove();
+    }
+  }else if(e.target.textContent = 'X'){
     if(confirm('Kas oled kindel, et kustutame ülesanne?')){
       e.target.parentElement.remove();
     }
   }
+
 }
