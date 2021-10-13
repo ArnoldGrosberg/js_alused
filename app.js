@@ -1,28 +1,23 @@
 // event elements
-const taskList = document.querySelector('ul')
-
+const taskList = document.querySelector('ul');
+const delAllBtn = document.getElementById('#del-tasks');
 
 // click element kustutamiseks
 taskList.addEventListener('click', deleteTask);
 
+delAllBtn.addEventListener('click', deleteTasks);
+
 function deleteTask(e) {
-  console.log(e);
 if(e.target.textContent = 'X'){
-    if(confirm('Kas oled kindel, et kustutame ülesanne?')){
+    if(confirm('Are you sure to delete this task?')){
       e.target.parentElement.remove();
     }
   }
-
 }
 
-const delAll = document.querySelector('del-Tasks')
-// click element kustutamiseks
-taskList.addEventListener('click', removeAll);
-console.log(delAll);
-function removeAll(e) {
-  if (confirm('Are you sure you want to delete all task?')) {
-    if (e.target.id == 'remAllbtn') {
-      taskList.innerHTML = '';
-    }
+function deleteTasks(e) {
+// taskList.innerHTML = '';
+while(taskList.firstChild){
+    taskList.removeChild(taskList.firstChild);
   }
 }
