@@ -4,7 +4,7 @@ const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
 const delAllBtn = document.querySelector('#del-tasks');
 const clearBtn = document.querySelector('#clear-tasks');
-
+const filterInput = document.querySelector('#filter');
 // page reloading event - lehe taaskäivitamine
 document.addEventListener('DOMContentLoaded', getTasks);
 
@@ -94,6 +94,7 @@ function removeTaskFromLocalStorage(task) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+// taskList.innerHTML = localStorage.getItem('Tasks')
 function getTasks(e){
   let tasks;
   if(localStorage.getItem('tasks') === null){
@@ -116,3 +117,23 @@ function getTasks(e){
   taskList.appendChild(li);
   });
 }
+
+// filter input event
+filterInput.addEventListener('keyup', filterTask())
+
+function filterTask(e){
+  text = e.target.value.toLowerCase();
+  const tasks = document.querySelectorAll('');
+  const tasks = document.querySelectorAll('collection-item');
+  tasks.forEach(function(element){
+    const task = element.firstChild.textContent.toLowerCase();
+    console.log(task.indexOf(text))
+    if(task.indexof(text) != -1) {
+      element.style.display = 'block';
+      }else{
+        element.style.display = 'none';
+      }
+    
+
+    }
+)}
